@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations Nokyoong SDU </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght=300;400;600;700&display=swap');
+
+        :root {
+            --sdu-blue: #005ba6;
+            --sdu-gold: #d4af37;
+            --sdu-light-blue: #e3f2fd;
+            --text-dark: #2d3436;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Anuphan', sans-serif;
+        }
+
+        body {
+            background-color: #eaf4fc;
+            color: var(--text-dark);
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1; 
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .logo-crest {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 91, 166, 0.2);
+            background: radial-gradient(circle, #ffffff 70%, #f0f7ff 100%);
+            border: 4px double var(--sdu-gold);
+            animation: bounce 2s infinite;
+        }
+
+        .logo-crest-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--sdu-blue);
+            letter-spacing: 1px;
+            line-height: 1;
+            margin-top: 5px;
+        }
+
+        .logo-crest-sub {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--sdu-gold);
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            color: var(--sdu-blue);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border: 1px solid var(--sdu-light-blue);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            color: var(--sdu-blue);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: #b3e5fc;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '▶️';
+            position: absolute;
+            left: -31px;
+            top: 2px;
+            font-size: 0.85rem;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="logo-crest">
+                <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#005ba6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                </svg>
+                <div class="logo-crest-text">SDU</div>
+                <div class="logo-crest-sub">SUAN DUSIT</div>
+            </div>
+            <h1>ติดมอสวนดุสิต ยินดีด้วยนะ </h1>          
+        </header>
+        
+        <section class="card">
+            <h2>ดีใจด้วยนะติดมอนี้</h2>
+            <p>เค้าภูมิใจเธอมากเลยนะเค้าลุ้นตัวเกร็งไปด้วยเลย แต่ถึงจะติดมอนี้ก็ยินดีด้วยนะอ้วน เย้ๆๆ</p>
+        </section>
+        
+        <section class="card">
+            <h2>แพลนที่เค้าคิดไว้นิหน่อยหลังจากเธอติด</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">หาหอให้เธอ</div>
+                    <p>เค้าอาจจะหาหอที่ดีๆใกล้ๆเค้าไม่รู้เธออยากมั้ย แต่ทำเลดีนะ มีเค้าคอยเลี้ยงด้วย</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">ไปฉลองกันน</div>
+                    <p>พาเธอเที่ยวนิดๆหน่อยๆ อยากพาเธอดูหนังที่อยากดู เค้าจะตามใจเธอพาเธอไปในที่ๆเธออยากไป(ทะเล)</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">ทำงานด้วยกัน</div>
+                    <p>ถ้าเธอติดมอนี้เค้าว่าเธอน่าจะใช้เงินแน่ๆ เดะเค้าพาเธอทำงานเองไม่ให้นอนอ้วนอยู่ห้องอย่างเดียวหรอกนะ</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>เค้าอวยพรให้นิดนึง</h2>
+            <p>ขอให้ชีวิตในมหาวิทยาลัยของเธอเจอแต่สิ่งดีๆนะครับ ขอให้ได้เจอเพื่อนดีๆแต่อย่าลืมดูแลสุขภาพตัวเองด้วยเพราะเธอต้องทำงาน เค้าคอยซัพพอร์ตตรงนี้เสมอนะ
+                ถึงจะไม่ได้อยากติดมอที่เธออยากเข้าที่สุดแต่เธอทำดีมากแล้ว โอ๋ๆนะ
+            </p>
+        </section>
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        class Firework {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height;
+                this.targetY = Math.random() * (canvas.height * 0.6);
+                this.speed = 4 + Math.random() * 4;
+                this.particles = [];
+                this.exploded = false;
+                this.hue = Math.random() * 40 + 200; 
+                this.color = `hsl(${this.hue}, 100%, 65%)`;
+            }
+            update() {
+                if (!this.exploded) {
+                    this.y -= this.speed;
+                    if (this.y <= this.targetY) {
+                        this.exploded = true;
+                        this.explode();
+                    }
+                } else {
+                    this.particles.forEach((p, i) => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.04;
+                        p.alpha -= 0.015;
+                        if (p.alpha <= 0) this.particles.splice(i, 1);
+                    });
+                }
+            }
+            explode() {
+                for (let i = 0; i < 30; i++) {
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * 3 + 1;
+                    this.particles.push({
+                        x: this.x,
+                        y: this.y,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed,
+                        alpha: 1
+                    });
+                }
+            }
+            draw() {
+                if (!this.exploded) {
+                    ctx.fillStyle = this.color;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    this.particles.forEach(p => {
+                        ctx.fillStyle = this.color;
+                        ctx.globalAlpha = p.alpha;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                    ctx.globalAlpha = 1;
+                }
+            }
+        }
+        const fireworks = [];
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (Math.random() < 0.03 && fireworks.length < 6) {
+                fireworks.push(new Firework());
+            }
+            fireworks.forEach((f, i) => {
+                f.update();
+                f.draw();
+                if (f.exploded && f.particles.length === 0) {
+                    fireworks.splice(i, 1);
+                }
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
